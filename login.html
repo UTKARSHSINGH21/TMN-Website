@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+<link rel="stylesheet" href="css files/login.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<link rel="stylesheet" href= "css/global.css">
+
+
+<style>
+  html, body {
+ height:100%;
+ padding:0;
+ margin:0;
+}
+  main {
+    background-color: #23262F;
+    height: 775px;
+    position: relative;
+    padding:0;
+ margin:0;
+  }
+
+  .head {
+    color: white;
+    position: relative;
+    left: 2px;
+    bottom: 10px;
+  }
+
+  .below {
+    display: inline;
+width: 500px;
+    padding-left: 5px;
+    padding-right: 15px;
+  }
+
+  #header {
+    display: flex;
+
+    width: 400px;
+    margin: 100px 0 60px 255px;
+    justify-content: center;
+    position: relative;
+  }
+
+  @media (max-width: 1060px) {
+    #header {
+      margin: 100px 0 60px 200px;
+    }
+  }
+
+ 
+
+  .user {
+    border: 2px solid white;
+    height: 75px;
+    margin: 50px;
+  }
+
+  .container-logins {
+    position: relative;
+    right: 180px;
+    padding: 25px 0px;
+    width: 440px;
+    flex-direction:column;
+    bottom: 50px;
+    margin-left: 380px;
+  }
+
+  .login input {
+    border: 1px solid #333845;
+
+    color: rgba(147, 147, 148, 1);
+
+    box-sizing: border-box;
+    margin: 6px 0 30px 60px;
+    background-color: #333845;
+    border-radius: 6px;
+    font-size: 16px;
+    padding: 10px;
+    height: 42px;
+    width: 55%;
+    box-shadow: 2px 2px black;
+    transition: 0.3s;
+  }
+
+  .password input {
+    border: 1px solid #333845;
+    box-sizing: border-box;
+    margin: 6px 0 30px 60px;
+    background-color: #333845;
+    color: rgba(147, 147, 148, 1);
+    border-radius: 6px;
+    font-size: 16px;
+    padding: 10px;
+
+    height: 42px;
+    width: 55%;
+    box-shadow: 2px 2px black;
+    transition: 0.3s;
+  }
+
+  .container-logins .login input::placeholder {
+    color: gray;
+  }
+
+  .container-logins .login input:focus-visible {
+    outline: 1px solid var(white);
+    border: 1px solid var(red);
+  }
+
+  .container-logins .login p {
+    font-size: 14px;
+    opacity: 0.6;
+    margin: 0;
+  }
+
+  .container-logins .botao-login {
+    background-color: #333845;
+    border: 1px solid whitesmoke;
+    border-radius: 6px;
+    margin-top: 30px;
+    position: relative;
+    bottom: 30px;
+    margin-left: 102px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 150px;
+    height: 45px;
+    box-shadow: 5px 5px black;
+    color: white;
+    transition: 0.3s;
+  }
+
+  .container-logins .botao-login:hover {
+    background-color: var(white);
+    border: 1px solid var(red);
+    color: var(purple);
+  }
+
+  .username {
+    position: relative;
+    left: 61px;
+    bottom: 7px;
+    color: white;
+  }
+
+  .pass {
+    position: relative;
+    left: 61px;
+    bottom: 7px;
+    color: white;
+  }
+
+  .imga {
+    display: flex;
+    justify-content: right;
+    position: absolute;
+    bottom: 33px;
+    left: 60.8%;
+    float: none;
+    width: 500px;
+    z-index: 50;
+  }
+
+  .whole {
+    position: relative;
+    bottom: 40px;
+    width: 500px;
+    height: 540px;
+    
+  }
+
+  .line-top {
+    width: 120px;
+    height: 60px;
+    z-index: 1000;
+    background: transparent;
+    border: none;
+    border-top: dashed 2px orange;
+    padding: 40px 40px;
+    border-radius: 50%;
+    margin: -460px -50px 0;
+    position: relative;
+    left: 740px;
+    top: 220px;
+   
+  }
+
+  h1{
+    font-family: 'Inter', sans-serif;
+    -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  
+  }
+
+  h1:hover{
+    color: #A020F0;
+    box-shadow:
+    0 0 60px 30px #fff,  /* inner white */
+    0 0 100px 60px #f0f, /* middle magenta */
+    0 0 140px 90px #0ff; /* outer cyan */
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  }
+
+p{
+    font-family: 'Inter', sans-serif;
+}
+
+  .line-bottom {
+    width: 120px;
+    height: 60px;
+    z-index: -1;
+    background: transparent;
+    border: none;
+    border-bottom: dashed 2px orange;
+    padding: 40px 40px;
+    border-radius: 0 0 50% 50%;
+    margin: 0 -65px;
+    position: relative;
+    bottom: 260px;
+    left: 121px;
+z-index: 1;
+  }
+
+  button {
+    position: relative;
+    left: 110px;
+    width: 110px;
+  }
+
+  /* .wrapper {
+    overflow: auto;
+  } */
+
+  @media (max-width: 884px) {
+    .imga {
+      display: none;
+    }
+  }
+
+  @media (max-width: 760px) {
+    .line-top {
+      display: none;
+    }
+  }
+  @media (max-width: 760px) {
+    .line-bottom {
+      display: none;
+    }
+  }
+
+  @media (max-width: 760px) {
+    
+.whole{
+
+  height: 70%;
+  
+}
+
+
+    }
+
+  @media (max-width: 760px) {
+    
+.m{
+  display: flex;
+  justify-content: center;
+  position: relative;
+  right:140px;
+}
+
+
+    }
+  
+
+@media (max-width: 1060px){
+
+
+  button{
+    width: 430px;
+    position: relative;
+    left: 45px;
+    
+  
+  }
+
+}
+
+
+.wrapper {
+  height: 60vh;
+  /*This part is important for centering*/
+  display: grid;
+  place-items: center;
+  position: relative;
+  color: white;
+}
+
+.typing-demo {
+  width: 48ch;
+  animation: typing 4s steps(22), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: 'Aboreto', cursive;
+  font-size: 2em;
+  position: relative;
+  bottom: 37px;
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+    
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+}
+
+
+
+
+/* .m{
+  display: flex;
+  justify-content: center;
+  
+} */
+
+#nav-placeholder{
+    z-index: 999;
+}
+
+
+hr{
+  position: absolute;
+  bottom: 180px;
+}
+
+
+.l{
+  position: relative;
+  bottom: 205px;
+  right: 50px;
+  background-color: rgb(249, 246, 249);
+  width: 7.5%;
+}
+.w{
+  position: relative;
+  bottom: 190px;
+  right: 320px;
+  background-color: rgb(255, 255, 255);
+  width: 7.5%;
+}
+
+
+
+.pp{
+  position: absolute;
+  bottom: 100px;
+}
+
+
+
+
+.login{
+  width: 700px;
+}
+.password{
+  width: 700px;
+}
+button{
+  width: 250px;
+}
+
+@media (max-width: 1060px) {
+    .login {
+      width:440px
+    }
+  }
+@media (max-width: 1060px) {
+    .password {
+      width:440px
+    }
+  }
+
+
+.container-boxes{
+  display: flex;
+  position: absolute;
+  bottom: 80px;
+  left: 275px;
+}
+
+
+@media (max-width: 1060px) {
+    .container-boxes {
+      left: 210px;
+    }
+  }
+
+  
+
+
+
+
+</style>
+
+<script>
+$(function(){
+    $("#nav-placeholder").load("files/navbar.html");
+});
+</script>
+
+
+
+
+<body ng-app>
+
+<main>
+    
+    <div id="nav-placeholder"></div>
+    <div class="m">
+  <div class="whole">
+    <div id="header">
+      <div class="container main mx-5">
+        <div class="row">
+          <div class="">
+            <h1 class="head">Welcome Back</h1>
+            <p class="below" style="color: white">New to TechMihirNaik?</p>
+            <p class="below"><a href="signup.html">SignUp</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+    <div class="container-logins">
+      <div class="row">
+        <div class="col-md-12 col-sm-12">
+          <div class="input-field">
+            <form  name="form"  novalidate >
+          <div class="login">
+            <label for="username" class="username">Username</label><br />
+            <input type="text" placeholder="Username" ng-model="username" ng-required="true" name="username" />
+
+            
+        </div>
+
+        <div class="input-field">
+          <div class="password">
+            <label for="pass" class="pass">password</label><br/>
+            <input type="password" placeholder="******" ng-model="pass" ng-required="true"  name="pass"  id="id_password" /><i class="far fa-eye"
+              id="togglePassword" style="position: relative; right: 30px; color: wheat"></i>
+ 
+                         
+  
+            </div>
+          </div>
+
+          <div class="col-4">
+            <button type="button" class="btn btn-outline-secondary btn-lg" ng-disabled="form.username.$invalid || form.pass.$invalid" ng-click="submit">
+              Login
+            </button>
+          </div>
+          </div>
+        </div>
+      
+      </div>
+    </div>
+  </div>
+
+</form>
+
+<br>
+
+<div class="major">
+<hr class="w" >
+<hr class="l" >
+</div>
+<div class="container-boxes">
+  <div class="row">
+    
+            <p class="pp" style="color: rgb(246, 249, 249); margin-left: 140px;">Or Login Using</p>
+            <div class="imagess" style="width: 100%;">
+                <img src="images/google.svg" width="50px" height="50px" style="margin-left: 90px;text-shadow: 3px 3px 3px 3px black;cursor: pointer;">
+                <img src="images/facebook.svg" width="50px" height="50px"style="margin-left: 110px;box-shadow: 3px 3px 3px 3px black; cursor: pointer;" >
+              </div>
+              </div>
+              </div>
+            </div>
+
+
+<!-- <div class="major">
+  <hr class="w">
+  <hr class="l">
+</div> -->
+
+
+
+
+
+
+          
+  <div class="line-top"></div>
+  <div class="line-bottom"></div>
+</div>
+
+<!-- <div class="wrapper">
+  <div class="typing-demo">
+    <h3>YOU CAN LOCATE US BY USING THE MAP BELOW ...</h3>
+  </div>
+</div> -->
+
+
+
+  <!-- image section on the right -->
+
+  <img class="imga" src="images/Slice 1 (2).png" />
+</div>
+  <script>
+    const togglePassword = document.querySelector("#togglePassword");
+    const password = document.querySelector("#id_password");
+
+    togglePassword.addEventListener("click", function (e) {
+      // toggle the type attribute
+      const type =
+        password.getAttribute("type") === "password" ? "text" : "password";
+      password.setAttribute("type", type);
+      // toggle the eye slash icon
+      this.classList.toggle("fa-eye-slash");
+    });
+  </script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </main>
+</body>
+
+</html>
