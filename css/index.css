@@ -42,7 +42,6 @@ main > section:nth-child(even){
     bottom: -1px;
     left:0;
     width: 100%;
-<<<<<<< HEAD
     height: 100%;
     content: '';
     filter: blur(3px);
@@ -113,8 +112,6 @@ main > section:nth-child(even){
     100%{
         transform: translateX(calc(-250px * 9));
     }
-=======
->>>>>>> f3abff872b14b8e6f837ecb28ae363fc080a0080
 }
 /* Contact Us */
 .contact-cards {
